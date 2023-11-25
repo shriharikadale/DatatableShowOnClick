@@ -1,0 +1,24 @@
+<template>
+    <lightning-button label={showcon} variant="Brand" onclick={handleclick}>
+    </lightning-button>   
+    
+     <template if:true={isDatatableVisisble}>
+    <lightning-card title="Contacts">  
+
+        <lightning-input type="search"
+                          class="slds-p-around_x-small"
+                        onchange={handleChange}
+                        label = "Search Contact"
+                        value={SearchKey}>
+
+        </lightning-input>
+        <lightning-datatable 
+            columns={column}
+            data={data}
+            key-field="Id">
+        </lightning-datatable>
+    </lightning-card>
+    </template> 
+</template>
+
+
